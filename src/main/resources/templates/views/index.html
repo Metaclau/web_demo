@@ -2,13 +2,18 @@
     <head>
         <meta charset="UTF-8">
         <title>Startseite</title>
+        
     </head>
     <body>
         <div th:fragment="title">
             Startseite
         </div>
         <div th:fragment="content">
-           <h1>index</h1>
+            <p th:text=${Username}>Username will be rendered here</p>
+            <form action="/your-endpoint" method="get">
+                <input type="hidden" name="map" value="test">
+                <button type="submit">Send String</button>
+            </form>
         </div>
     </body>
 </html>
